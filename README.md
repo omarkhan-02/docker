@@ -1,3 +1,29 @@
+Task-8.2HD DOCKER
+## 🐳 Dockerised SplitDeal App
+#clone the repository using git clone <git repo>
+change the origin - git remote remove origin
+run the script below in docker build and push the code into new "docker repo" created.
+output : localhost:4010/api/student
+### 🔧 How to Build the Image
+
+```bash
+docker build --no-cache -t splitdeal-app .
+
+How to Run the Container
+```bash
+docker run -p 4010:3000 --env-file .env splitdeal-app
+
+Expected Output
+json
+
+{
+  "name": "Omar Khan",
+  "studentId": "225027671"
+}
+Access the Application
+Visit:
+http://localhost:4010/api/student
+
 # Split-Deal
 This repository contains the code written for Split Deal, a deal sharing platform. Its going to use Vanilla JS and node.
 
