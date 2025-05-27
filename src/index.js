@@ -79,7 +79,12 @@ app.use("/api/deal", dealRoutes);
 app.use("/api/group", groupRoutes);
 app.use("/api/groupMember", groupMemberRoutes);
 app.use("/api/user", userRoutes);
-
+app.get("/api/student", (req, res) => {
+  res.json({
+    name: "Omar Khan",
+    studentId: "225027671"  
+  });
+});
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('Connected to MongoDB');
